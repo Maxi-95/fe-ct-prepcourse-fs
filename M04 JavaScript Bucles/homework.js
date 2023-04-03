@@ -35,7 +35,7 @@ function conection(status) {
    // Tu código:
    if(status === 1){
       return  "Online"
-   }else if(status ===2){
+   }else if(status === 2){
       return  "Away"
    }else{
       return "Offline"
@@ -127,6 +127,15 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   if(num % 3 === 0 && num % 5 === 0){
+      return 'fizzbuzz';
+   }else if(num % 5 === 0){
+      return "buzz";
+   }else if(num % 3 === 0){
+      return 'fizz';
+   }else{
+      return false;
+   }
    
 }
 
@@ -150,15 +159,19 @@ function esPrimo(num) {
    // Tu código:
    if(num <= 1){
       return false;
-   }else{
-      // 5/2 5/3 5/4
-      
-      for(let i = 2; i < num; i++){
+
+   }else{        
+
+      // 5    
+      for(let i = 2; i <= num; i++){
+         
+         // 5  %  4 === 1
          if(num % i === 0){
             return false;
          }
       }
-      return true;
+
+      return true; 
    }
 }
 
@@ -185,9 +198,9 @@ function tieneTresDigitos(num) {
       return false;
    }
 }
-
+               // 5
 function doWhile(num) {
-   // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
+   // Implementar una función que aumente el valor recibido en 5 hasta un límite de 7 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
@@ -196,11 +209,13 @@ function doWhile(num) {
    let suma = num;
 
    do{
-      suma +=5;
-      iterador--;
+      suma += 5;
+      iterador--; 
    }while(iterador > 0)
    
+   
    return suma;
+   
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
